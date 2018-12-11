@@ -1,0 +1,26 @@
+version: '2.2'
+
+services:
+    rabbitmq:
+        container_name: tiny_rabbitmq
+        hostname: tiny_rabbitmq
+        image: rabbitmq:3
+        ports:
+            - 4369:4369
+            - 5671:5671
+            - 5672:5672
+    celery:
+        # run first time
+        # -----
+        # apt update
+        # apt install procps -y
+        # apt install python3 -y 
+        # apt install python3-pip -y
+        # pip3 install celery
+        # apt install vim -y
+        # /etc/init.d/ssh start
+        
+        image: debian:testing
+        container_name: tiny_celery
+        hostname: tiny_celery
+        tty: true
